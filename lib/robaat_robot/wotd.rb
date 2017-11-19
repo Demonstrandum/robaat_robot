@@ -13,7 +13,7 @@ module Robåt
       @wotd = @word_list[@info['wotd']]
 
       @scheduler = Rufus::Scheduler.new
-      @scheduler.every('12h') { next }
+      @scheduler.every('24h') { next }
     end
 
     def add en, no, notes=String.new

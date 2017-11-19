@@ -130,7 +130,8 @@ EOF
     end
 
     private def schedule
-      @scheduler.every '3h' do
+      puts "Private scheduler started at #{Time.now}"
+      @scheduler.every '4h' do
         puts "Scheduled event at #{Time.now}"
 
         @bot.api.send_message(
