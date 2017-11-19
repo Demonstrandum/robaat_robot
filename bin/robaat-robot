@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require 'robaat_robot'
+
+token = Robåt::load_token
+bot = Robåt::Bot.new token
+
+threads = Array.new
+threads << Thread.new do
+  bot.commands
+end
+
+threads.each { |thread| thread.join }
+
